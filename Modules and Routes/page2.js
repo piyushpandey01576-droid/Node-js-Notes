@@ -1,11 +1,9 @@
-function page2 (req, resp) {
-    resp.write(`
-        <form action="/html/submit">
-        <input type="text" placeholder="usenmae">
-        <input type="password"placeholder="password">
-        <button>Submit</button>
-        </form>
-        `);
-}
+const http = require('http');
 
-module.exports = page2;
+http.createServer( (req, resp) => {
+
+
+     return resp.end();
+} ).listen(4500, () => {
+    console.log('Server is running on port 4500');
+} );
